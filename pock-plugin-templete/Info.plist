@@ -18,7 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>PKWidgetAuthor</key>
+	<string>p-x9</string>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>pock-plugin-templete.SampleWidget</string>
 </dict>
 </plist>
