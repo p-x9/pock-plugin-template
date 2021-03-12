@@ -17,14 +17,16 @@ class SampleWidget: PKWidget {
 
     var count = 1
 
+    var button: NSButton!
+
     required init() {
-        let button = NSButton(title: "Sample", image: NSImage(systemSymbolName: "hands.sparkles", accessibilityDescription: nil) ?? NSImage(), target: self, action: #selector(handleButton(_:)))
-        button.font = NSFont.systemFont(ofSize: 15)
-        self.view = button
+        self.button = NSButton(title: "Sample", image: NSImage(systemSymbolName: "hands.sparkles", accessibilityDescription: nil) ?? NSImage(), target: self, action: #selector(handleButtonTapped(_:)))
+        self.button.font = NSFont.systemFont(ofSize: 15)
+        self.view = self.button
     }
 
     @objc
-    func handleButton(_ sender: Any?) {
+    func handleButtonTapped(_ sender: Any?) {
         NSLog("button tapped!!")
         guard let button = sender as? NSButton else {
             return
@@ -33,4 +35,29 @@ class SampleWidget: PKWidget {
         count += 1
     }
 
+}
+
+extension SampleWidget: PKScreenEdgeMouseDelegate {
+    private func shouldHighlight(for location: NSPoint, in view: NSView) -> Bool {
+        self.button.convert(button.bounds, to: view).contains(location)
+    }
+    
+    func screenEdgeController(_ controller: PKScreenEdgeController, mouseEnteredAtLocation location: NSPoint, in view: NSView) {
+        button.isHighlighted = shouldHighlight(for: location, in: view)
+    }
+
+    func screenEdgeController(_ controller: PKScreenEdgeController, mouseMovedAtLocation location: NSPoint, in view: NSView) {
+        button.isHighlighted = shouldHighlight(for: location, in: view)
+    }
+
+    func screenEdgeController(_ controller: PKScreenEdgeController, mouseClickAtLocation location: NSPoint, in view: NSView) {
+        button.isHighlighted = shouldHighlight(for: location, in: view)
+        if button.isHighlighted {
+            handleButtonTapped(button)
+        }
+    }
+
+    func screenEdgeController(_ controller: PKScreenEdgeController, mouseExitedAtLocation location: NSPoint, in view: NSView) {
+        button.isHighlighted = false
+    }
 }
