@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SampleWidgetPreferencePane" customModule="pock_plugin_templete" customModuleProvider="target">
+            <connections>
+                <outlet property="imageButton" destination="AQk-AV-d3J" id="aBM-8e-1y8"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="o5G-GQ-h3X"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-oq-ZdB">
+                    <rect key="frame" x="16" y="16" width="448" height="240"/>
+                    <subviews>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-G7-WyH">
+                            <rect key="frame" x="0.0" y="0.0" width="448" height="240"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DVM-uw-F9f">
+                                    <rect key="frame" x="-2" y="224" width="298" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Image" id="9NA-qF-a71">
+                                        <font key="font" usesAppearanceFont="YES"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-AV-d3J">
+                                    <rect key="frame" x="299" y="216" width="153" height="25"/>
+                                    <popUpButtonCell key="cell" type="push" title="hand.raised" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="apt-oi-Xd1" id="pTS-Gp-Tmg">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" id="9Fy-Bn-Kwu">
+                                            <items>
+                                                <menuItem title="hand.raised" state="on" image="hand.raised" catalog="system" id="apt-oi-Xd1"/>
+                                                <menuItem title="hand.thumbsup" image="hand.thumbsup" catalog="system" id="T4y-GR-OFc"/>
+                                                <menuItem title="hand.point.left" image="hand.point.left" catalog="system" id="zzB-Ch-HYl"/>
+                                                <menuItem title="hands.sparkles" image="hands.sparkles" catalog="system" id="FdV-zm-4Jb"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <action selector="handleImageButton:" target="-2" id="haO-Ml-dqZ"/>
+                                    </connections>
+                                </popUpButton>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tNq-G7-WyH" firstAttribute="width" secondItem="qfE-oq-ZdB" secondAttribute="width" id="fx6-7T-KNQ"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qfE-oq-ZdB" secondAttribute="trailing" constant="16" id="7cO-ZV-0K8"/>
+                <constraint firstItem="qfE-oq-ZdB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="aXf-Yz-naz"/>
+                <constraint firstAttribute="bottom" secondItem="qfE-oq-ZdB" secondAttribute="bottom" constant="16" id="sdF-C4-IB9"/>
+                <constraint firstItem="qfE-oq-ZdB" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="16" id="yGf-DB-teJ"/>
+            </constraints>
+            <point key="canvasLocation" x="21" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="hand.point.left" catalog="system" width="16" height="13"/>
+        <image name="hand.raised" catalog="system" width="16" height="16"/>
+        <image name="hand.thumbsup" catalog="system" width="16" height="17"/>
+        <image name="hands.sparkles" catalog="system" width="18" height="19"/>
+    </resources>
+</document>

@@ -7,5 +7,6 @@ target 'pock-plugin-templete' do
 
   # Pods for pock-plugin-templete
   pod 'PockKit'
+  pod 'Defaults'
 
 end

@@ -8,15 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		41833986170EC4845701E84B /* Pods_pock_plugin_templete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AE405B990BA8AF12978B9F /* Pods_pock_plugin_templete.framework */; };
+		4265576225FFA535009A2CBF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265576125FFA535009A2CBF /* Preferences.swift */; };
 		42A2084525F9176E003B60DE /* SampleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2084425F9176E003B60DE /* SampleWidget.swift */; };
+		42D03FCE25FF6324009CEAAB /* SampleWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D03FCC25FF6324009CEAAB /* SampleWidgetPreferencePane.swift */; };
+		42D03FCF25FF6324009CEAAB /* SampleWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D03FCD25FF6324009CEAAB /* SampleWidgetPreferencePane.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E84793D72A71E6E1056383 /* Pods-pock-plugin-templete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pock-plugin-templete.release.xcconfig"; path = "Target Support Files/Pods-pock-plugin-templete/Pods-pock-plugin-templete.release.xcconfig"; sourceTree = "<group>"; };
+		4265576125FFA535009A2CBF /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		42A2083825F9174F003B60DE /* pock-plugin-templete.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pock-plugin-templete.pock"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A2083B25F9174F003B60DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A2084325F9176D003B60DE /* pock-plugin-templete-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pock-plugin-templete-Bridging-Header.h"; sourceTree = "<group>"; };
 		42A2084425F9176E003B60DE /* SampleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWidget.swift; sourceTree = "<group>"; };
+		42D03FCC25FF6324009CEAAB /* SampleWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWidgetPreferencePane.swift; sourceTree = "<group>"; };
+		42D03FCD25FF6324009CEAAB /* SampleWidgetPreferencePane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleWidgetPreferencePane.xib; sourceTree = "<group>"; };
 		5FC4F5132544DDA251016BDA /* Pods-pock-plugin-templete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pock-plugin-templete.debug.xcconfig"; path = "Target Support Files/Pods-pock-plugin-templete/Pods-pock-plugin-templete.debug.xcconfig"; sourceTree = "<group>"; };
 		F7AE405B990BA8AF12978B9F /* Pods_pock_plugin_templete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pock_plugin_templete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -33,6 +39,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		428D35FB25FF3C0300621A9C /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				4265576125FFA535009A2CBF /* Preferences.swift */,
+				428D360425FF473400621A9C /* SamplePreferencePane */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		428D360425FF473400621A9C /* SamplePreferencePane */ = {
+			isa = PBXGroup;
+			children = (
+				42D03FCC25FF6324009CEAAB /* SampleWidgetPreferencePane.swift */,
+				42D03FCD25FF6324009CEAAB /* SampleWidgetPreferencePane.xib */,
+			);
+			path = SamplePreferencePane;
+			sourceTree = "<group>";
+		};
 		42A2082F25F9174F003B60DE = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +89,7 @@
 			children = (
 				42A2084425F9176E003B60DE /* SampleWidget.swift */,
 				42A2084325F9176D003B60DE /* pock-plugin-templete-Bridging-Header.h */,
+				428D35FB25FF3C0300621A9C /* Preferences */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -97,7 +122,7 @@
 				42A2083425F9174F003B60DE /* Sources */,
 				42A2083525F9174F003B60DE /* Frameworks */,
 				42A2083625F9174F003B60DE /* Resources */,
-				42A2084825F917F6003B60DE /* ShellScript */,
+				42A2084825F917F6003B60DE /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -145,13 +170,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D03FCF25FF6324009CEAAB /* SampleWidgetPreferencePane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42A2084825F917F6003B60DE /* ShellScript */ = {
+		42A2084825F917F6003B60DE /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,6 +186,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -197,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D03FCE25FF6324009CEAAB /* SampleWidgetPreferencePane.swift in Sources */,
 				42A2084525F9176E003B60DE /* SampleWidget.swift in Sources */,
+				4265576225FFA535009A2CBF /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +351,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "pock-plugin-templete/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +376,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "pock-plugin-templete/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,9 +7,17 @@
 //
 
 import PockKit
+import Defaults
+
+enum Images: String, Codable {
+    case raised = "hand.raised"
+    case thumbsup = "hand.thumbsup"
+    case left = "hand.point.left"
+    case sparkles = "hands.sparkles"
+}
 
 class SampleWidget: PKWidget {
-    var identifier: NSTouchBarItem.Identifier = NSTouchBarItem.Identifier(rawValue: "com.test.samplewidget")
+    var identifier: NSTouchBarItem.Identifier = NSTouchBarItem.Identifier(rawValue: "SampleWidget")
 
     var customizationLabel: String = "SampleWidget"
 
@@ -20,9 +28,12 @@ class SampleWidget: PKWidget {
     var button: NSButton!
 
     required init() {
-        self.button = NSButton(title: "Sample", image: NSImage(systemSymbolName: "hands.sparkles", accessibilityDescription: nil) ?? NSImage(), target: self, action: #selector(handleButtonTapped(_:)))
+        let name = Defaults[.imageNameToDisplay]
+        self.button = NSButton(title: "Sample", image: NSImage(systemSymbolName: name.rawValue, accessibilityDescription: nil) ?? NSImage(), target: self, action: #selector(handleButtonTapped(_:)))
         self.button.font = NSFont.systemFont(ofSize: 15)
         self.view = self.button
+
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(reloadImage), name: .shouldReloadImage, object: nil)
     }
 
     @objc
@@ -35,13 +46,19 @@ class SampleWidget: PKWidget {
         count += 1
     }
 
+    @objc
+    func reloadImage() {
+        let name = Defaults[.imageNameToDisplay]
+        button.image = NSImage(systemSymbolName: name.rawValue, accessibilityDescription: nil)
+    }
+
 }
 
 extension SampleWidget: PKScreenEdgeMouseDelegate {
     private func shouldHighlight(for location: NSPoint, in view: NSView) -> Bool {
         self.button.convert(button.bounds, to: view).contains(location)
     }
-    
+
     func screenEdgeController(_ controller: PKScreenEdgeController, mouseEnteredAtLocation location: NSPoint, in view: NSView) {
         button.isHighlighted = shouldHighlight(for: location, in: view)
     }
