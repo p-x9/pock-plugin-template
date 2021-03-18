@@ -21,8 +21,8 @@
 	<key>PKWidgetAuthor</key>
 	<string>p-x9</string>
 	<key>NSPrincipalClass</key>
-	<string>pock_plugin_templete.SampleWidget</string>
+	<string>pock_plugin_template.SampleWidget</string>
 	<key>PKWidgetPreferenceClass</key>
-	<string>pock_plugin_templete.SampleWidgetPreferencePane</string>
+	<string>pock_plugin_template.SampleWidgetPreferencePane</string>
 </dict>
 </plist>
