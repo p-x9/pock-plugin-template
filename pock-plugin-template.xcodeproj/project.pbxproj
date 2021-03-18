@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41833986170EC4845701E84B /* Pods_pock_plugin_templete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AE405B990BA8AF12978B9F /* Pods_pock_plugin_templete.framework */; };
+		20053080234401481126EE31 /* Pods_pock_plugin_template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8F72E433FAA0EF33FD441C /* Pods_pock_plugin_template.framework */; };
 		4265576225FFA535009A2CBF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265576125FFA535009A2CBF /* Preferences.swift */; };
 		42A2084525F9176E003B60DE /* SampleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2084425F9176E003B60DE /* SampleWidget.swift */; };
 		42D03FCE25FF6324009CEAAB /* SampleWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D03FCC25FF6324009CEAAB /* SampleWidgetPreferencePane.swift */; };
@@ -23,8 +23,10 @@
 		42A2084425F9176E003B60DE /* SampleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWidget.swift; sourceTree = "<group>"; };
 		42D03FCC25FF6324009CEAAB /* SampleWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWidgetPreferencePane.swift; sourceTree = "<group>"; };
 		42D03FCD25FF6324009CEAAB /* SampleWidgetPreferencePane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleWidgetPreferencePane.xib; sourceTree = "<group>"; };
+		440E754809012F81F1439638 /* Pods-pock-plugin-template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pock-plugin-template.release.xcconfig"; path = "Target Support Files/Pods-pock-plugin-template/Pods-pock-plugin-template.release.xcconfig"; sourceTree = "<group>"; };
 		5FC4F5132544DDA251016BDA /* Pods-pock-plugin-templete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pock-plugin-templete.debug.xcconfig"; path = "Target Support Files/Pods-pock-plugin-templete/Pods-pock-plugin-templete.debug.xcconfig"; sourceTree = "<group>"; };
-		F7AE405B990BA8AF12978B9F /* Pods_pock_plugin_templete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pock_plugin_templete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE2F56C796AB76673D1FA77 /* Pods-pock-plugin-template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pock-plugin-template.debug.xcconfig"; path = "Target Support Files/Pods-pock-plugin-template/Pods-pock-plugin-template.debug.xcconfig"; sourceTree = "<group>"; };
+		BB8F72E433FAA0EF33FD441C /* Pods_pock_plugin_template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pock_plugin_template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41833986170EC4845701E84B /* Pods_pock_plugin_templete.framework in Frameworks */,
+				20053080234401481126EE31 /* Pods_pock_plugin_template.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +99,7 @@
 		78E1CC6249DEF5084D99BBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F7AE405B990BA8AF12978B9F /* Pods_pock_plugin_templete.framework */,
+				BB8F72E433FAA0EF33FD441C /* Pods_pock_plugin_template.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +109,8 @@
 			children = (
 				5FC4F5132544DDA251016BDA /* Pods-pock-plugin-templete.debug.xcconfig */,
 				05E84793D72A71E6E1056383 /* Pods-pock-plugin-templete.release.xcconfig */,
+				8CE2F56C796AB76673D1FA77 /* Pods-pock-plugin-template.debug.xcconfig */,
+				440E754809012F81F1439638 /* Pods-pock-plugin-template.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -228,7 +232,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-pock-plugin-templete-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-pock-plugin-template-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,7 +368,7 @@
 		};
 		42A2083F25F9174F003B60DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FC4F5132544DDA251016BDA /* Pods-pock-plugin-templete.debug.xcconfig */;
+			baseConfigurationReference = 8CE2F56C796AB76673D1FA77 /* Pods-pock-plugin-template.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,7 +393,7 @@
 		};
 		42A2084025F9174F003B60DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05E84793D72A71E6E1056383 /* Pods-pock-plugin-templete.release.xcconfig */;
+			baseConfigurationReference = 440E754809012F81F1439638 /* Pods-pock-plugin-template.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
